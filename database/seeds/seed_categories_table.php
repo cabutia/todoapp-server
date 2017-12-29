@@ -15,11 +15,11 @@ class seed_categories_table extends Seeder
         $categories = [
           [
             'title' => 'Ceres Solutions',
-            'style' => '{"border-color":"hsla(340, 100%, 50%, 0.8)"}'
+            'style' => '{"background-color":"hsla(340, 100%, 50%, 0.8)"}'
           ],
           [
             'title' => 'Desarrollo',
-            'style' => '{"border-color":"hsla(190, 100%, 50%, 0.8)"}'
+            'style' => '{"background-color":"hsla(190, 100%, 50%, 0.8)"}'
           ]
         ];
         foreach ($categories as $category) {

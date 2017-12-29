@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     protected $fillable = [
-        'objId', 'title', 'description', 'category_id'
+        'objId', 'title', 'description', 'category_id', 'status'
     ];
 
     public function category()
