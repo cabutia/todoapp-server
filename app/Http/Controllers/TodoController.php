@@ -31,7 +31,8 @@ class TodoController extends Controller
 
     public function update(Request $r)
     {
-
+      $item = Todo::find($r->get('id'))->update($r->all());
+      return response()->json($item);
     }
 
     public function store(Request $r)
@@ -43,6 +44,8 @@ class TodoController extends Controller
 
     public function delete($id, Request $r)
     {
-
+      $todo = Todo::find($r->get('id'));
+      $todo->delete();
+      return response()->json($r->get('id'));
     }
 }

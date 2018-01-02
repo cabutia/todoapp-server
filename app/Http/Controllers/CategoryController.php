@@ -30,7 +30,10 @@ class CategoryController extends Controller
 
     public function update(Request $r)
     {
-
+      $category = Category::find($r->get('id'));
+      $category->update($r->only(['title', 'style']));
+      $cat = Category::find($r->get('id'));
+      return response()->json($cat);
     }
 
     public function store(Request $r)
